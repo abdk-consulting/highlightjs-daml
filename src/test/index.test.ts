@@ -7,9 +7,9 @@
  * Run:  npm test
  */
 
+import hljs from "highlight.js";
 import { strict as assert } from "node:assert";
 import { describe, it } from "node:test";
-import hljs from "highlight.js";
 import daml from "../index.js";
 
 // Register the language once for all tests.
@@ -325,7 +325,7 @@ template Iou
 // ---------------------------------------------------------------------------
 
 describe("auto-detection (positive)", () => {
-  it("detects DAML template as daml", () => {
+  it("detects Daml template as daml", () => {
     const code = `
 template Asset
   with
@@ -337,12 +337,12 @@ template Asset
       controller owner
       do return ()
 `.trim();
-    assert.equal(detect(code), "daml", "DAML template code should be auto-detected as daml");
+    assert.equal(detect(code), "daml", "Daml template code should be auto-detected as daml");
   });
 });
 
 // ---------------------------------------------------------------------------
-// 12. Auto-detection (negative — other languages not mis-detected as DAML)
+// 12. Auto-detection (negative — other languages not mis-detected as Daml)
 // ---------------------------------------------------------------------------
 
 describe("auto-detection (negative)", () => {

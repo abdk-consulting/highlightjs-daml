@@ -1,7 +1,7 @@
 {
   "name": "highlightjs-daml",
   "version": "1.0.1",
-  "description": "Highlight.js syntax definition for the DAML language",
+  "description": "Highlight.js syntax definition for the Daml language",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

@@ -1,7 +1,7 @@
 # Developer Guide — highlightjs-daml
 
 A [Highlight.js](https://highlightjs.org/) language plugin that adds syntax
-highlighting for [DAML](https://www.digitalasset.com/developers) — the
+highlighting for [Daml](https://www.digitalasset.com/developers) — the
 smart contract language developed by Digital Asset.
 
 ---
@@ -88,8 +88,8 @@ The test suite lives in `src/test/index.test.ts` and covers:
 | String literals | Double-quoted strings |
 | Operators | `->`, `<-`, `=>`, `::` |
 | Full template snippet | End-to-end highlight of an `Iou` template |
-| Auto-detection (positive) | DAML templates correctly identified by `highlightAuto` |
-| Auto-detection (negative) | JS, Python, Rust not mis-identified as DAML |
+| Auto-detection (positive) | Daml templates correctly identified by `highlightAuto` |
+| Auto-detection (negative) | JS, Python, Rust not mis-identified as Daml |
 
 ---
 

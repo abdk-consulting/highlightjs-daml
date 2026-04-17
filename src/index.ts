@@ -1,10 +1,10 @@
 import { HLJSApi, Language } from "highlight.js";
 
 export default function daml(hljs: HLJSApi): Language {
-  // DAML uses Haskell-style line comments starting with --
+  // Daml uses Haskell-style line comments starting with --
   const LINE_COMMENT = hljs.COMMENT('--', '$');
 
-  // DAML uses Haskell-style block comments {- ... -}
+  // Daml uses Haskell-style block comments {- ... -}
   const BLOCK_COMMENT = hljs.COMMENT(/\{-/, /-\}/, { contains: ['self'] });
 
   // Pragma / language extension: {-# OPTIONS_GHC ... #-}
@@ -175,15 +175,15 @@ export default function daml(hljs: HLJSApi): Language {
     relevance: 0
   };
 
-  // DAML-specific template-clause keywords: these are highly distinctive and
-  // boost auto-detection relevance so `highlightAuto` identifies DAML reliably.
+  // Daml-specific template-clause keywords: these are highly distinctive and
+  // boost auto-detection relevance so `highlightAuto` identifies Daml reliably.
   const DAML_CLAUSES = {
     className: 'keyword',
     begin: /\b(?:signatory|controller|maintainer|observer)\b/,
     relevance: 3
   };
 
-  // DAML / Haskell operators
+  // Daml / Haskell operators
   const OPERATOR = {
     className: 'operator',
     begin: /->|<-|=>|::|\\|[+\-*/%&|^~!<>=?@#$:.]+/,
@@ -267,7 +267,7 @@ export default function daml(hljs: HLJSApi): Language {
       // ── uppercase literals (before generic TYPE_NAME) ─────────────────────
       LITERAL_NAMES,
 
-      // ── DAML-specific clause keywords (high relevance for auto-detect) ─────
+      // ── Daml-specific clause keywords (high relevance for auto-detect) ─────
       DAML_CLAUSES,
 
       // ── type names ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────

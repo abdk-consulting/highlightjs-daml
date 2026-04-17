@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A [Highlight.js](https://highlightjs.org/) language plugin that adds rich
-syntax highlighting for **[DAML](https://www.digitalasset.com/developers)** —
+syntax highlighting for **[Daml](https://www.digitalasset.com/developers)** —
 the smart contract language developed by Digital Asset for building
 multi-party workflows on distributed ledgers.
 
@@ -19,7 +19,7 @@ multi-party workflows on distributed ledgers.
 - Template, interface, and exception declarations with class name highlighting
 - Choice declarations highlighted as function titles
 - Module and import directives highlighted as meta
-- DAML/Haskell pragmas (`{-# OPTIONS_GHC … #-}`)
+- Daml/Haskell pragmas (`{-# OPTIONS_GHC … #-}`)
 - Built-in types and functions: `Party`, `ContractId`, `Text`, `Decimal`,
   `create`, `exercise`, `fetch`, `archive`, and more
 - Literals: `True`, `False`, `None`, `Some`
@@ -29,7 +29,7 @@ multi-party workflows on distributed ledgers.
 - Type names highlighted as `type`
 - Infix operators in backticks (`` `elem` ``)
 - Standard and Haskell-specific operators (`->`, `<-`, `=>`, `::`, `\`, …)
-- Correct auto-detection: DAML templates reliably identified via `highlightAuto`
+- Correct auto-detection: Daml templates reliably identified via `highlightAuto`
 
 ---
 
@@ -127,8 +127,8 @@ template Asset
 
 ### Auto-detection
 
-The plugin registers DAML with high-relevance rules on template/choice/signatory
-constructs so `highlightAuto` correctly identifies DAML source files:
+The plugin registers Daml with high-relevance rules on template/choice/signatory
+constructs so `highlightAuto` correctly identifies Daml source files:
 
 ```js
 const result = hljs.highlightAuto(unknownCode);
